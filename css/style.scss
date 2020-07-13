@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+//Colors
+
+$red   : hsl(0, 78%, 62%);
+$cyan  : hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue  : hsl(212, 86%, 64%);
+
+$very-dark-blue : hsl(234, 12%, 34%);
+$gray-blue      : hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+body {
+  font-family   : 'Poppins', sans-serif;
+  display       : flex;
+  flex-direction: column;
+  font-size     : 15px;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  background-color: $very-light-gray;
+  height: 100vh;
+}
+
+.header {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+  color          : $very-dark-blue;
+
+
+  .title {
+    h1 {
+      display       : flex;
+      flex-direction: column;
+      font-weight   : 200;
+      font-size     : 1.5em;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .description {
+    text-align: center;
+    color     : $gray-blue;
+
+    p {
+      margin-top: 0;
+    }
+  }
+}
+
+.cards {
+  display      : grid;
+  justify-items: center;
+
+  @media only screen and (min-width: 800px) {
+    justify-content: space-around;
+    grid-template-rows: [row1-start] 1fr [row1-end row2-start] 1fr [row2-end];
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "col1 col2 col3"
+      "col1 col2 col3";
+  }
+}
+
+.card {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : flex-start;
+  width          : 15em;
+  margin-top     : 1.5em;
+  padding        : 0.8em 1.5em 1.5em 1.5em;
+  border-radius  : 3px;
+  color          : $very-dark-blue;
+  border-top     : 3px solid;
+  background-color: white;
+
+  &:nth-of-type(1) {
+    border-color: $cyan;
+  }
+
+  &:nth-of-type(2) {
+    border-color: $red;
+  }
+
+  &:nth-of-type(3) {
+    border-color: $orange;
+  }
+
+  &:nth-of-type(4) {
+    border-color: $blue;
+  }
+
+  box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.2);
+
+  h2 {
+    margin-bottom: 0;
+    font-size    : 1.2em;
+  }
+
+  p {
+    color        : $gray-blue;
+    margin-top   : 0;
+    margin-bottom: 2em;
+    font-size    : 1em;
+  }
+
+  img {
+    align-self: flex-end;
+  }
+
+  @media only screen and (min-width: 800px) {
+    &:nth-of-type(1) {
+      border-color: $cyan;
+      grid-area: col1;
+      align-self: center;
+    }
+  
+    &:nth-of-type(2) {
+      border-color: $red;
+      grid-area: col2;
+      grid-row: row1-start / row1-end;
+    }
+  
+    &:nth-of-type(3) {
+      border-color: $orange;
+      grid-area: col2;
+      grid-row: row2-start / row2-end;
+    }
+  
+    &:nth-of-type(4) {
+      border-color: $blue;
+      grid-area: col3;
+      align-self: center;
+    }
+  }
+}
+
+footer {
+  margin-top: 1em;
+}
+
+.attribution {
+  font-size : 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
