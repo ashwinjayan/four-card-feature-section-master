@@ -68,12 +68,16 @@ body {
 
 @media only screen and (min-width: 800px) {
   .cards {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-grid-rows: [row1-start] 1fr [row1-end row2-start] 1fr [row2-end];
         grid-template-rows: [row1-start] 1fr [row1-end row2-start] 1fr [row2-end];
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    -webkit-column-gap: 1em;
+            column-gap: 1em;
         grid-template-areas: "col1 col2 col3" "col1 col2 col3";
   }
 }

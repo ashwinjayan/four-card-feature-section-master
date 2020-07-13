@@ -59,9 +59,10 @@ body {
   justify-items: center;
 
   @media only screen and (min-width: 800px) {
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     grid-template-rows: [row1-start] 1fr [row1-end row2-start] 1fr [row2-end];
-    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1em;
     grid-template-areas: "col1 col2 col3"
       "col1 col2 col3";
   }
