@@ -44,7 +44,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   font-weight: 200;
-  font-size: 1.5em;
 }
 
 .header .title span {
@@ -96,7 +95,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 15em;
+  width: 20em;
   margin-top: 1.5em;
   padding: 0.8em 1.5em 1.5em 1.5em;
   border-radius: 3px;
@@ -125,14 +124,11 @@ body {
 
 .card h2 {
   margin-bottom: 0;
-  font-size: 1.2em;
 }
 
 .card p {
   color: #a3a5ae;
-  margin-top: 0;
   margin-bottom: 2em;
-  font-size: 1em;
 }
 
 .card img {
